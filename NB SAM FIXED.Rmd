@@ -143,5 +143,7 @@ nbayesModel <- naiveBayes(trainDTM,trainDataFrame$label,laplace = 1)
 
 ```{r} 
 predVec <- predict(nbayesModel,testDTM) 
-confusionMatrix(predVec,testDataFrame$label,positive = "Fake",dnn = c("Prediction","True")) 
+confusionMatrix(predVec,testDataFrame$label,positive = "Fake",dnn = c("Prediction","True"))
 ``` 
+
+##I would have tried to find a way to use the whole dataset if possible, if it was impossible then I also would have deleted a few rows in order to process the data
